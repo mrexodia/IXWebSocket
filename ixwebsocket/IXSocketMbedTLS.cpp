@@ -88,6 +88,8 @@ namespace ix
         // On macOS we can query the system cert location from the keychain
         // On Linux we could try to fetch some local files based on the distribution
         // On Android we could use JNI to get to the system certs
+        // More information: https://serverfault.com/a/722646
+        errorMsg = "System certificates not supported on this platform";
         return false;
 #endif
     }
